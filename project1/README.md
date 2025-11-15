@@ -14,3 +14,4 @@ Explore data with a notebook.
 (.venv\Scripts\activate)
 uv run --with jupyter jupyter lab
 
+
