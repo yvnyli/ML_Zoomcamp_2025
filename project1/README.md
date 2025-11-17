@@ -17,6 +17,7 @@ uv init
 uv venv
 .venv\Scripts\activate
 uv add pandas scikit-learn xgboost seaborn fastapi uvicorn
+uv add --dev psutil pympler tqdm
 ```
 
 Explore data with a notebook.
@@ -25,5 +26,6 @@ Explore data with a notebook.
 (.venv\Scripts\activate)
 uv run --with jupyter jupyter lab
 ```
+
 
 
