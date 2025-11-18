@@ -1,3 +1,4 @@
+# This is an older version of the project from start of development. Polished and cleaned version is in [https://github.com/yvnyli/MLZoomcamp_Project1](https://github.com/yvnyli/MLZoomcamp_Project1)
 # Predict ride share price
 
 ## Problem description
@@ -73,7 +74,7 @@ Visit: http://localhost:9696/docs
 ``
 
 
-## Notes and command line workflows
+## Notes and command line workflows for early development
 Start the project by setting up dependency management with uv.
 ```
 (cd into working directory)
@@ -91,9 +92,3 @@ Explore data with a notebook.
 uv run --with jupyter jupyter lab
 ```
 
-
-Cloud deployment
-0 points: No deployment to the cloud
-1 point: Docs describe clearly (with code) how to deploy the service to cloud or kubernetes cluster (local or remote)
-2 points: There's code for deployment to cloud or kubernetes cluster (local or remote). There's a URL for testing - or video/screenshot of testing it
-Total max 16 points
