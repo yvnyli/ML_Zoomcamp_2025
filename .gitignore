@@ -184,3 +184,5 @@ cython_debug/
 # project data
 #  project data is too big
 project1/data/
+project1/*.pkl
+HW8/data/
