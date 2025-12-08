@@ -9,6 +9,10 @@ from onnx import load
 from onnx.reference import ReferenceEvaluator
 
 
+onnxfn = "hair_classifier_empty.onnx"
+#onnxfn = "hair_classifier_v1.onnx"
+
+
 
 def download_image(url):
     with request.urlopen(url) as resp:
@@ -48,9 +52,9 @@ def preprocess(img):
 
 
 
-def main():
+def predict_test():
     # load the onnx model in the image
-    with open("hair_classifier_empty.onnx", "rb") as f:
+    with open(onnxfn, "rb") as f:
         onnx_model = load(f)
     
     imurl = 'https://habrastorage.org/webt/yf/_d/ok/yf_dokzqy3vcritme8ggnzqlvwa.jpeg'
@@ -69,6 +73,17 @@ def main():
     
     return results
 
+
+def lambda_handler(event, context):    
+    print("Parameters:", event)
+    customer = event['customer']
+    prob = predict_single(customer)
+    return {
+        "churn_probability": prob,
+        "churn": bool(prob >= 0.5)
+    }
+    
+
 if __name__ == "__main__":
     
-    main()
+    predict_test()
